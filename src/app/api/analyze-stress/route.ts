@@ -14,18 +14,23 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  const prompt = `사용자가 답변한 스트레스 테스트 질문은 다음과 같습니다: ${answers.join(', ')}. 사용자가 얼마나 스트레스를 받았는지 평가해 주세요.`;
+  const prompt = `
+                  사용자가 답변한 스트레스 테스트 질문은 다음과 같습니다: 
+                  ${answers.join(', ')}. 
+                  사용자가 얼마나 스트레스를 받았는지 평가해 주세요.
+                  `;
 
   try {
     const response = await openai.chat.completions.create({
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: prompt }],
-      max_tokens: 50,
+      max_tokens: 1000,
     });
 
     const message = response.choices?.[0]?.message?.content?.trim();
 
     if (message) {
+      console.log("답변 메시지", message);
       return new NextResponse(JSON.stringify({ message }), { status: 200 });
     } else {
       console.error("No message returned in the response.");
