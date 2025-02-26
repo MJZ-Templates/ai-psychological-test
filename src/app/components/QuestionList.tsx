@@ -1,7 +1,7 @@
 // src/app/components/QuestionList.tsx
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Question from './Question';
 
 interface Question {
@@ -28,18 +28,22 @@ const QuestionList: React.FC<QuestionListProps> = ({ onComplete }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState<string[]>([]);
 
+    // 질문이 변경될 때 클래스 변경을 통한 애니메이션 처리를 연습해보세요.
     const handleAnswer = (answer: string) => {
-        setAnswers([...answers, answer]);
-        const nextQuestionIndex = currentQuestionIndex + 1;
-        if (nextQuestionIndex < questions.length) {
-            setCurrentQuestionIndex(nextQuestionIndex);
+        setAnswers(prev => [...prev, answer]);
+        
+        if (currentQuestionIndex + 1 < questions.length) {
+            setTimeout(() => {
+                setCurrentQuestionIndex(prev => prev + 1);
+            }, 0);
         } else {
-            onComplete(answers);
+            onComplete([...answers, answer]);
         }
     };
 
+    // 현재 질문의 텍스트를 바꾸면서 애니메이션을 보여줄 수 있는 방법입니다.
     return (
-        <div>
+        <div key={currentQuestionIndex} className="fade-in-animation">
             <Question question={questions[currentQuestionIndex]} handleAnswer={handleAnswer} />
         </div>
     );
