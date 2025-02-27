@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 Stress Analysis Psychological Test
 
-## Getting Started
+A web application where AI analyzes stress levels and provides personalized advice based on user responses.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Key Features
+
+### 🔍 1. Stress Diagnostic Test
+- Offers personalized questions
+- Easy to answer with an intuitive UI
+- Provides hints for each question to enhance understanding
+
+### 🤖 2. AI-Based Analysis
+- Utilizes the OpenAI GPT-3.5 model
+- Comprehensive analysis of user responses
+- Evaluates stress levels and provides tailored advice
+
+### 📊 3. Visual Results Display
+- Highlights stress-related keywords
+- Provides detailed analysis results
+- Offers specific advice for improvement
+
+---
+
+## 🛠 Technology Stack
+
+### 🎨 Frontend
+- Next.js 13
+- React
+- TypeScript
+- Tailwind CSS
+
+### 🏗 Backend
+- Next.js API Routes
+- OpenAI API
+
+### 🎨 Design
+- Responsive web design
+- Custom fonts
+- Modern UI/UX
+
+---
+
+## 🌟 Key Features
+
+✅ **User-Friendly Interface**: Intuitive design for easy use by anyone  
+✅ **Real-Time Analysis**: Instant results using AI  
+✅ **Personalized Advice**: Specific improvement plans based on individual situations  
+✅ **Expert-Level Analysis**: Analysis provided from the perspective of a mental health specialist  
+
+---
+
+### 🔗 Set Environment Variables
+```
+OPENAI_API_KEY=your_api_key_here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
