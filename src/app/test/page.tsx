@@ -2,10 +2,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Layout from '@/app/components/Layout'
-import QuestionList from '@/app/components/QuestionList'
-import Result from '@/app/components/Result'
-import LoadingView from '@/app/components/LoadingView'
+import Layout from '@/app/components/Layout';
+import QuestionList from '@/app/components/QuestionList';
+import Result from '@/app/components/Result';
+import LoadingView from '@/app/components/LoadingView';
 
 const TestPage: React.FC = () => {
   const [result, setResult] = useState<string | null>(null);
@@ -23,14 +23,14 @@ const TestPage: React.FC = () => {
       });
 
       if (!response.ok) {
-        console.error('API 응답이 실패했습니다.');
+        console.error('API response failed.');
         return;
       }
 
       const data = await response.json();
       setResult(data.message);
     } catch (error) {
-      console.error('API 요청 중 오류가 발생했습니다:', error);
+      console.error('An error occurred during the API request:', error);
     } finally {
       setIsLoading(false);
     }

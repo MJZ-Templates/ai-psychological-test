@@ -1,5 +1,5 @@
 // src/app/components/questions.ts
-// 질문 변경 가능
+// Questions can be modified
 
 interface Question {
     text: string;
@@ -9,43 +9,43 @@ interface Question {
 
 export const questions: Question[] = [
     {
-        text: '최근 들어 걱정이 많아지셨나요?',
-        options: ['별로 걱정 안해요', '가끔 걱정해요', '자주 그래요', '항상 그래요'],
-        answers: ['괜찮은 편이에요', '가끔 그럴 수 있어요', '좀 신경 써야겠는데요', '많이 힘드시겠어요'],
+        text: 'Have you been worrying more lately?',
+        options: ['Not really worried', 'Sometimes', 'Often', 'Always'],
+        answers: ['You seem okay', 'It\'s normal to worry sometimes', 'You might need to take care', 'That must be very tough for you'],
     },
     {
-        text: '일을 하거나 공부할 때 집중하기가 힘든 적이 있나요?',
-        options: ['항상 집중 잘해요', '가끔 산만해져요', '자주 그래요', '거의 항상 그래요'],
-        answers: ['좋은 상태에요', '보통 그럴 때 있어요', '조금 신경 써야겠는데요', '많이 신경 쓰이고 힘드시겠어요'],
+        text: 'Have you had trouble concentrating while working or studying?',
+        options: ['Always focused', 'Sometimes distracted', 'Often', 'Almost always'],
+        answers: ['You are in good shape', 'It\'s normal sometimes', 'You might need to take care', 'It must be very tiring for you'],
     },
     {
-        text: '밤에 잠을 잘 못 잤던 적이 있나요?',
-        options: ['잘 자고 있어요', '가끔 힘든 밤이 있어요', '자주 그래요', '거의 항상 그래요'],
-        answers: ['편안한 상태에요', '가끔 그럴 수 있어요', '잠이 중요한데 신경 써볼까요?', '잠을 못 자면 힘드시겠어요'],
+        text: 'Have you had trouble sleeping at night?',
+        options: ['Sleeping well', 'Occasionally tough nights', 'Often', 'Almost always'],
+        answers: ['You seem relaxed', 'It\'s normal sometimes', 'Sleep is important, maybe take care?', 'Not being able to sleep must be very tough for you'],
     },
     {
-        text: '감정이 오락가락해서 힘든 적이 있나요?',
-        options: ['감정이 안정적이에요', '가끔 감정 기복이 있어요', '자주 그래요', '항상 그래요'],
-        answers: ['무난한 상태에요', '감정이란 게 원래 그래요', '조금 신경 써야겠는데요', '감정이 안정되지 않으면 힘드시겠어요'],
+        text: 'Have you had a hard time because your emotions fluctuated?',
+        options: ['Emotionally stable', 'Sometimes emotionally unstable', 'Often', 'Always'],
+        answers: ['You are in a stable state', 'Emotions can be like that', 'You might need to take care', 'It must be very tough if your emotions are unstable'],
     },
     {
-        text: '불편한 증상(두통, 소화 불량)이 생긴 적이 있나요?',
-        options: ['몸이 괜찮아요', '가끔 불편해요', '자주 그래요', '항상 그래요'],
-        answers: ['건강한 상태에요', '가끔씩 몸이 그럴 수 있어요', '건강에 신경 써야겠는데요', '몸이 불편하면 많이 힘드시겠어요'],
+        text: 'Have you had any uncomfortable symptoms (headache, indigestion)?',
+        options: ['Feeling physically well', 'Occasionally uncomfortable', 'Often', 'Almost always'],
+        answers: ['You seem healthy', 'It\'s normal to feel that sometimes', 'You might need to take care of your health', 'It must be very tough if you feel uncomfortable'],
     },
     {
-        text: '요즘 재미있다고 느끼는 일이 별로 없으신가요?',
-        options: ['늘 즐거워요', '가끔 심심해요', '자주 심심해요', '거의 항상 그래요'],
-        answers: ['좋은 상태에요', '그럴 때도 있어요', '재미있는 일을 찾으려 노력해볼까요?', '즐거움을 찾기 힘들다면 힘드시겠어요'],
+        text: 'Have you been feeling there aren\'t many things you find enjoyable lately?',
+        options: ['Always having fun', 'Sometimes bored', 'Often bored', 'Almost always'],
+        answers: ['You are in a good state', 'It\'s normal sometimes', 'Maybe try to find something fun?', 'It must be tough if you can\'t find joy'],
     },
     {
-        text: '사람들과 어울리고 싶지 않다고 느낀 적이 있나요?',
-        options: ['사람들과 잘 어울려요', '가끔 혼자 있고 싶어요', '자주 혼자 있고 싶어요', '거의 항상 그래요'],
-        answers: ['좋은 사회적 관계에요', '혼자만의 시간도 필요하지요', '사회적 관계에 신경 좀 써볼까요?', '사람들과 어울리지 않으면 외로우실 수 있어요'],
+        text: 'Have you felt that you don\'t want to socialize with people?',
+        options: ['Socializing well', 'Sometimes want to be alone', 'Often want to be alone', 'Almost always'],
+        answers: ['You have good social relationships', 'Alone time is necessary too', 'Maybe take care of your social relationships?', 'Not socializing can make you feel lonely'],
     },
     {
-        text: '뭐든 쉽게 짜증이 나거나 화가 나신 적이 있나요?',
-        options: ['거의 없어요', '가끔 그랬어요', '자주 그랬어요', '거의 항상 그래요'],
-        answers: ['평온한 상태에요', '가끔 그럴 수 있지요', '마음을 좀 다스릴 필요가 있겠어요', '짜증이나 화가 나면 힘드시겠어요'],
+        text: 'Have you been easily irritated or angry?',
+        options: ['Almost never', 'Sometimes', 'Often', 'Almost always'],
+        answers: ['You are in a peaceful state', 'Sometimes it\'s normal', 'Maybe try to calm your mind', 'Feeling irritated or angry must be tough'],
     },
 ];
