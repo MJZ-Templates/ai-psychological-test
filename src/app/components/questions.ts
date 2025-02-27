@@ -1,4 +1,5 @@
 // src/app/components/questions.ts
+// 질문 변경 가능
 
 interface Question {
     text: string;

@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleComplete = async (allQuestionsAndAnswers: { question: string; answer: string }[]) => {
-    setIsLoading(true); // 로딩 시작
+    setIsLoading(true); 
     
     try {
       const response = await fetch('/api/analyze-stress', {
@@ -32,9 +32,8 @@ const HomePage: React.FC = () => {
       setResult(data.message);
     } catch (error) {
       console.error('API 요청 중 오류가 발생했습니다:', error);
-      // 필요한 경우 에러 처리 로직 추가
     } finally {
-      setIsLoading(false); // 로딩 종료
+      setIsLoading(false); 
     }
   };
 

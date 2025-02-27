@@ -5,7 +5,6 @@ interface ResultProps {
 }
 
 const Result: React.FC<ResultProps> = ({ message }) => {
-    // 첫 번째 줄을 키워드로 분리
     const [keyword, ...paragraphs] = message.split('\n\n');
     const regex = /상태:\s*([^\n]+)/;
     const match = keyword.match(regex);

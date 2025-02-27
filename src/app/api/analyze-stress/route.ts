@@ -1,6 +1,5 @@
 import { OpenAI } from 'openai';
 import { NextRequest, NextResponse } from 'next/server';
-import Question from '@/app/components/Question';
 
 export const config = { api: { bodyParser: true } };
 
@@ -9,6 +8,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+  // 프롬프트 변경 가능
   const prompt = `안녕하세요, 당신은 정신건강의학과 전문의입니다. 
   오늘 진행하신 스트레스 평가 테스트 결과를 바탕으로 상담을 진행하도록 하겠습니다.
   
