@@ -51,8 +51,34 @@ A web application where AI analyzes stress levels and provides personalized advi
 
 ---
 
-### 🔗 Set Environment Variables
+
+## 📋 Environment Setup Guide
+### API Key Configuration
+To run this application, you need to set up your OpenAI API key in a `.env` file:
+1. Create a `.env` file in the root directory
+2. Add your OpenAI API key:
 ```
 OPENAI_API_KEY=your_api_key_here
 ```
 
+### Quick Start
+```
+# 1. Clone the repository
+git clone [repository-url]
+
+# 2. Install dependencies
+npm install
+
+# 3. Create .env file and add your OpenAI API key
+echo "OPENAI_API_KEY=your_api_key_here" > .env
+
+# 4. Start the development server
+npm run dev
+```
+### ⚠️ Important Note
+- The application requires an OpenAI API key to function
+- You can get an API key from OpenAI Platform
+- Never commit your .env file to version control
+- Keep your API key private and secure
+
+Without a valid API key, the stress analysis feature will not work. Make sure to properly configure your environment variables before running the application.
