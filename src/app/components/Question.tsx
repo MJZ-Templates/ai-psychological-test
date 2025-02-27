@@ -4,7 +4,7 @@ interface QuestionProps {
     question: {
         text: string;
         options: string[];
-        hints: string[];
+        answers: string[];
     };
     handleAnswer: (answer: string) => void;
 }
@@ -24,15 +24,15 @@ const Question: React.FC<QuestionProps> = ({ question, handleAnswer }) => {
     }, [showHint]);
 
     const handleOptionClick = (option: string, index: number) => {
-        setHint(question.hints[index]);
+        setHint(question.answers[index]);
         setShowHint(true);
         handleAnswer(option);
     };
 
     return (
-        <div className="rounded p-6 min-h-screen flex flex-col items-center justify-center text-center">
-            <h2 className="text-3xl font-semibold text-white mb-6">{question.text}</h2>
-            <div className="flex flex-col w-full max-w-md">
+        <div className="rounded p-6 min-h-screen flex flex-col items-center justify-start text-center"> {/* justify-start로 변경 */}
+            <h2 className="text-3xl font-semibold text-white mb-6">{question.text}</h2> {/* h2를 div의 맨 위로 이동 */}
+            <div className="flex flex-col w-full max-w-md mt-20"> {/* margin-top을 추가하여 여백 설정 */}
                 {question.options.map((option, index) => (
                     <button
                         key={index}
