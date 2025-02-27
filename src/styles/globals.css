@@ -1,0 +1,132 @@
+/* public/globals.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: 'NoonnuBasicGothicRegular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'NoonnuBasicGothicRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s forwards;
+}
+
+@keyframes gradient-x {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+}
+
+.button {
+    color: #fff; 
+    margin-bottom: 25px; 
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    height: 50px;
+    font-family: 'Ownglyph_ParkDaHyun', sans-serif; 
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #495287; 
+}
+
+/* 커스텀 그라디언트 */
+.bg-gradient-diagonal {
+    background: linear-gradient(135deg, #131826, #2E3561, #6C52A0);
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* globals.css에 추가 */
+.bg-gradient-start {
+    background: linear-gradient(135deg, 
+        rgba(46, 53, 97, 0.9), 
+        rgba(108, 82, 160, 0.9), 
+        rgba(173, 152, 215, 0.8)
+    );
+    background-size: 200% 200%;
+}
+
+/* 더 화려한 버전을 원하신다면 */
+.bg-gradient-start {
+    background: linear-gradient(135deg, 
+        #2E3561,
+        #6C52A0,
+        #AD98D7,
+        #C4B5E8,
+        #AD98D7,
+        #6C52A0,
+        #2E3561
+    );
+    background-size: 400% 400%;
+}
+
+/* 애니메이션 속도 조절 */
+.animate-gradient-x {
+    animation: gradient-x 20s ease infinite;
+}
+
+/* 추가적인 글래스모피즘 효과를 위한 스타일 */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
