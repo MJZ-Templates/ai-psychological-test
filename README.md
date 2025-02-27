@@ -78,7 +78,7 @@ npm run dev
 ### ⚠️ Important Note
 - The application requires an OpenAI API key to function
 - You can get an API key from OpenAI Platform
-- Never commit your .env file to version control
+- Never commit your `.env` file to version control
 - Keep your API key private and secure
 
 Without a valid API key, the stress analysis feature will not work. Make sure to properly configure your environment variables before running the application.
