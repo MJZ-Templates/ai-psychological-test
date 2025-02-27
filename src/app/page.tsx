@@ -24,14 +24,14 @@ const HomePage: React.FC = () => {
       });
 
       if (!response.ok) {
-        console.error('API 응답이 실패했습니다.');
+        console.error('API response failed.');
         return;
       }
 
       const data = await response.json();
       setResult(data.message);
     } catch (error) {
-      console.error('API 요청 중 오류가 발생했습니다:', error);
+      console.error('An error occurred while making the API request:', error);
     } finally {
       setIsLoading(false); 
     }

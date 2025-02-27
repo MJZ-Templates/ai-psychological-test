@@ -24,7 +24,7 @@ const QuestionList: React.FC<QuestionListProps> = ({ onComplete }) => {
         if (currentQuestionIndex + 1 < questions.length) {
             setTimeout(() => {
                 setCurrentQuestionIndex(prev => prev + 1);
-            }, 800); // 0.8초 딜레이 
+            }, 800); // 0.8 seconds delay 
         } else {
             setTimeout(() => {
                 onComplete([...questionHistory, { question: questions[currentQuestionIndex].text, answer }]);

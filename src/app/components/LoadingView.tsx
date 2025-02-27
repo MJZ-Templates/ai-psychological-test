@@ -7,10 +7,10 @@ const LoadingView = () => {
       <div className="mb-8">
         <div className="w-12 h-12 border-4 border-[#AD98D7] border-t-transparent rounded-full animate-spin"></div>
       </div>
-      <h2 className="text-2xl font-['Ownglyph_ParkDaHyun'] font-semibold text-[#AD98D7] mb-4">분석 중입니다</h2>
+      <h2 className="text-2xl font-['Ownglyph_ParkDaHyun'] font-semibold text-[#AD98D7] mb-4">Analyzing</h2>
       <p className="text-gray-400 text-center font-['NoonnuBasicGothicRegular']">
-        AI가 당신의 스트레스 상태를 분석하고 있습니다...<br/>
-        잠시만 기다려주세요.
+        The AI is analyzing your stress levels...<br/>
+        Please wait a moment.
       </p>
     </div>
   );
