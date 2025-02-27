@@ -30,8 +30,8 @@ const Question: React.FC<QuestionProps> = ({ question, handleAnswer }) => {
     };
 
     return (
-        <div className="rounded p-6 min-h-screen flex flex-col items-center justify-start text-center"> 
-            <h2 className="text-3xl font-semibold text-white mb-6">{question.text}</h2>
+        <div className="rounded p-30 h-[80vh] md:h-[50vh] flex flex-col items-center justify-start text-center">
+            <h2 className="text-3xl font-semibold text-white mb-6 mt-10">{question.text}</h2>
             <div className="flex flex-col w-full max-w-md mt-20"> 
                 {question.options.map((option, index) => (
                     <button
@@ -44,7 +44,7 @@ const Question: React.FC<QuestionProps> = ({ question, handleAnswer }) => {
                 ))}
             </div>
             {showHint && (
-                <div className="mt-4 p-3 bg-[#6C52A0] text-black text-1s rounded-lg shadow-md animate-fade-in rounded-3xl">
+                <div className="mt-4 pt-3 pb-3 pl-5 pr-5 bg-[#859CC0] text-gray-200 text-1s rounded-2xl animate-fade-in rounded-3xl">
                     {hint}
                 </div>
             )}

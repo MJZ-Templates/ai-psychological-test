@@ -27,8 +27,8 @@ const QuestionList: React.FC<QuestionListProps> = ({ onComplete }) => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center text-gray-200">
-            <div key={currentQuestionIndex} className="w-full max-w-2xl p-6 rounded-lg shadow-lg animate-fade-in">
+        <div className="flex items-center justify-center text-gray-200 border rounded-3xl border-gray-400">
+            <div key={currentQuestionIndex} className="w-full max-w-2xl p-6 rounded-lg animate-fade-in">
                 <Question question={questions[currentQuestionIndex]} handleAnswer={handleAnswer} />
             </div>
         </div>

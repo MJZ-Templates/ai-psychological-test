@@ -55,7 +55,7 @@ body {
     color: #fff; 
     margin-bottom: 25px; 
     border: none;
-    border-radius: 10px; 
+    border-radius: 15px; 
     cursor: pointer;
     height: 50px;
     font-family: 'Ownglyph_ParkDaHyun', sans-serif; 
@@ -65,7 +65,7 @@ body {
 }
 
 .button:hover {
-    background-color: #4b5563; 
+    background-color: #495287; 
 }
 
 /* 커스텀 그라디언트 */
