@@ -1,8 +1,9 @@
-/* public/globals.css */
+/* Import Tailwind CSS base, components, and utilities */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Define custom font 'NoonnuBasicGothicRegular' */
 @font-face {
     font-family: 'NoonnuBasicGothicRegular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2') format('woff2');
@@ -10,6 +11,7 @@
     font-style: normal;
 }
 
+/* Define custom font 'Ownglyph_ParkDaHyun' */
 @font-face {
     font-family: 'Ownglyph_ParkDaHyun';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
@@ -17,6 +19,7 @@
     font-style: normal;
 }
 
+/* Set default styles for the body */
 body {
     margin: 0;
     font-family: 'NoonnuBasicGothicRegular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -24,6 +27,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fade-in animation keyframes */
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -33,10 +37,12 @@ body {
     }
 }
 
+/* Apply fade-in animation */
 .animate-fade-in {
     animation: fade-in 1s forwards;
 }
 
+/* Gradient-x animation keyframes */
 @keyframes gradient-x {
     0%, 100% {
         background-position: 0% 50%;
@@ -46,11 +52,13 @@ body {
     }
 }
 
+/* Apply gradient-x animation */
 .animate-gradient-x {
     background-size: 200% 200%;
     animation: gradient-x 15s ease infinite;
 }
 
+/* Button styles */
 .button {
     color: #fff; 
     margin-bottom: 25px; 
@@ -64,16 +72,73 @@ body {
     text-align: center;
 }
 
+/* Button hover effect */
 .button:hover {
     background-color: #495287; 
 }
 
-/* custom gradient */
+/* Custom diagonal gradient background */
 .bg-gradient-diagonal {
     background: linear-gradient(135deg, #131826, #2E3561, #6C52A0);
 }
 
+/* Hide scrollbar styles */
 .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+}
+
+/* Apply floating animation */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Custom gradient background start */
+.bg-gradient-start {
+    background: linear-gradient(135deg, 
+        rgba(46, 53, 97, 0.9), 
+        rgba(108, 82, 160, 0.9), 
+        rgba(173, 152, 215, 0.8)
+    );
+    background-size: 200% 200%;
+}
+
+/* For a more vivid version */
+.bg-gradient-start {
+    background: linear-gradient(135deg, 
+        #2E3561,
+        #6C52A0,
+        #AD98D7,
+        #C4B5E8,
+        #AD98D7,
+        #6C52A0,
+        #2E3561
+    );
+    background-size: 400% 400%;
+}
+
+/* Adjust animation speed */
+.animate-gradient-x {
+    animation: gradient-x 20s ease infinite;
+}
+
+/* Glassmorphism effect styles */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }

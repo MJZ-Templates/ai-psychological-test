@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';  // Added import for Link component
 
 interface ResultProps {
     message: string;
@@ -12,9 +13,8 @@ const Result: React.FC<ResultProps> = ({ message }) => {
     
     return (
         <div className="my-8 p-8 bg-gray-800/90 text-gray-200 rounded-lg shadow-xl max-w-3xl mx-auto animate-fade-in backdrop-blur-sm overflow-auto max-h-[80vh] scrollbar-hide">
-
             <h2 className="text-3xl font-semibold text-[#AD98D7] text-center mb-8 mt-2 font-['NoonnuBasicGothicRegular']">
-                Stress Analysis Result
+                Stress Analysis Results
             </h2>
             
             {/* Keyword Section */}
@@ -26,7 +26,7 @@ const Result: React.FC<ResultProps> = ({ message }) => {
                 </div>
             </div>
 
-            {/* Main Content */}
+            {/* Body Content */}
             <div className="space-y-6 text-gray-300">
                 {paragraphs.map((paragraph, index) => (
                     <p key={index} className="text-lg leading-8 tracking-wide font-['NoonnuBasicGothicRegular'] px-4">
@@ -41,7 +41,20 @@ const Result: React.FC<ResultProps> = ({ message }) => {
 
             {/* Disclaimer */}
             <div className="mt-12 text-center text-sm text-gray-400">
-                <p>※ This analysis result is for reference only, and we recommend consulting with a professional for an accurate diagnosis.</p>
+                <p>※ This analysis result is for reference only, and we recommend consulting a professional for accurate diagnosis.</p>
+            </div>
+
+            {/* Restart Button */}
+            <div className="mt-8 text-center">
+                <Link 
+                    href="/"
+                    className="inline-block px-6 py-3 bg-[#6C52A0] text-white rounded-full 
+                             text-lg font-bold transform transition-all duration-200 
+                             hover:scale-105 hover:bg-[#9F8AC7] shadow-lg
+                             font-['NoonnuBasicGothicRegular']"
+                >
+                    Restart Test
+                </Link>
             </div>
         </div>
     );
