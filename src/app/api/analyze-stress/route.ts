@@ -9,6 +9,7 @@ export const config = {
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
   const { answers } = await req.json();
+  console.log(answers);
 
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,

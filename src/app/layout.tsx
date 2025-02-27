@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import React from 'react';
 import '@/styles/globals.css';
 
@@ -10,7 +9,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content="심리테스트를 통해 스트레스 수준을 감지합니다." />
             </head>
-            <body className="bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 min-h-screen">
+            <body className="text-gray-200">
                 {children}
             </body>
         </html>

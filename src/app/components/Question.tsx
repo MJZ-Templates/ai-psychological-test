@@ -1,4 +1,3 @@
-// src/app/components/Question.tsx
 import React, { useState, useEffect } from 'react';
 
 interface QuestionProps {
@@ -19,7 +18,7 @@ const Question: React.FC<QuestionProps> = ({ question, handleAnswer }) => {
         if (showHint) {
             timer = setTimeout(() => {
                 setShowHint(false);
-            }, 1000); 
+            }, 1000);
         }
         return () => clearTimeout(timer);
     }, [showHint]);
@@ -31,21 +30,21 @@ const Question: React.FC<QuestionProps> = ({ question, handleAnswer }) => {
     };
 
     return (
-        <div className="relative my-4 backdrop-blur rounded p-4 shadow-lg min-h-screen">
-            <h2 className="text-2xl mb-4 text-white">{question.text}</h2>
-            <div className="flex flex-col max-w-xs mx-auto">
+        <div className="rounded p-6 min-h-screen flex flex-col items-center justify-center text-center">
+            <h2 className="text-3xl font-semibold text-white mb-6">{question.text}</h2>
+            <div className="flex flex-col w-full max-w-md">
                 {question.options.map((option, index) => (
                     <button
                         key={index}
                         onClick={() => handleOptionClick(option, index)}
-                        className="bg-gradient-to-r to-purple-600 text-white py-2 px-4 rounded-full m-1 transition-transform transform hover:scale-105"
+                        className="button mb-3"
                     >
                         {option}
                     </button>
                 ))}
             </div>
             {showHint && (
-                <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-4 bg-yellow-200 text-yellow-800 rounded-lg shadow-md transition-opacity duration-1000 ease-in-out opacity-100">
+                <div className="mt-4 p-3 bg-yellow-500 text-black rounded-lg shadow-md animate-fade-in">
                     {hint}
                 </div>
             )}

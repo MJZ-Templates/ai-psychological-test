@@ -1,4 +1,3 @@
-// src/app/components/QuestionList.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -19,17 +18,17 @@ const QuestionList: React.FC<QuestionListProps> = ({ onComplete }) => {
         if (currentQuestionIndex + 1 < questions.length) {
             setTimeout(() => {
                 setCurrentQuestionIndex(prev => prev + 1);
-            }, 1000); // Add a 1-second delay before showing the next question
+            }, 800); // 0.8초 딜레이 
         } else {
             setTimeout(() => {
                 onComplete([...answers, answer]);
-            }, 1000); // Add a 1-second delay before completing the quiz
+            }, 800);
         }
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 bg-cover animate-gradient-x">
-            <div key={currentQuestionIndex} className="w-full max-w-3xl fade-in-animation">
+        <div className="min-h-screen flex items-center justify-center text-gray-200">
+            <div key={currentQuestionIndex} className="w-full max-w-2xl bg-gray-900 p-6 rounded-lg shadow-lg animate-fade-in">
                 <Question question={questions[currentQuestionIndex]} handleAnswer={handleAnswer} />
             </div>
         </div>
