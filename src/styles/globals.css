@@ -93,3 +93,40 @@ body {
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+
+  /* globals.css에 추가 */
+.bg-gradient-start {
+    background: linear-gradient(135deg, 
+        rgba(46, 53, 97, 0.9), 
+        rgba(108, 82, 160, 0.9), 
+        rgba(173, 152, 215, 0.8)
+    );
+    background-size: 200% 200%;
+}
+
+/* 더 화려한 버전을 원하신다면 */
+.bg-gradient-start {
+    background: linear-gradient(135deg, 
+        #2E3561,
+        #6C52A0,
+        #AD98D7,
+        #C4B5E8,
+        #AD98D7,
+        #6C52A0,
+        #2E3561
+    );
+    background-size: 400% 400%;
+}
+
+/* 애니메이션 속도 조절 */
+.animate-gradient-x {
+    animation: gradient-x 20s ease infinite;
+}
+
+/* 추가적인 글래스모피즘 효과를 위한 스타일 */
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}

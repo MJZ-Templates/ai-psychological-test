@@ -4,21 +4,21 @@ import Link from 'next/link';
 
 const StartPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4">
-      <div className="text-center space-y-8 animate-fade-in">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-start animate-gradient-x">
+      <div className="text-center space-y-8 animate-fade-in backdrop-blur-sm bg-gray-200/90 p-8 rounded-2xl">
         {/* 타이틀 섹션 */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-['Ownglyph_ParkDaHyun'] text-[#AD98D7]">
+          <h1 className="text-4xl md:text-5xl font-['NoonnuBasicGothicRegular'] text-[#AD98D7]">
             스트레스 분석 테스트
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 font-['NoonnuBasicGothicRegular']">
+          <p className="text-lg md:text-xl text-gray-500 font-['NoonnuBasicGothicRegular']">
             AI가 당신의 스트레스 수준을 분석해드립니다
           </p>
         </div>
 
         {/* 설명 섹션 */}
         <div className="max-w-md mx-auto space-y-4 text-gray-400 font-['NoonnuBasicGothicRegular']">
-          <p>• 약 3분 정도 소요됩니다</p>
+          <p>• 약 1분 정도 소요됩니다</p>
           <p>• 솔직한 답변일수록 정확한 분석이 가능합니다</p>
           <p>• 전문가의 관점에서 맞춤형 조언을 받아보세요</p>
         </div>
