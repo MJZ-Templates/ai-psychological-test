@@ -58,8 +58,8 @@ body {
     border-radius: 15px; 
     cursor: pointer;
     height: 50px;
-    font-family: 'Ownglyph_ParkDaHyun', sans-serif; 
-    font-size: 30px;
+    font-family: 'NoonnuBasicGothicRegular', sans-serif; 
+    font-size: 28px;
     justify-content: center;
     text-align: center;
 }
@@ -68,7 +68,7 @@ body {
     background-color: #495287; 
 }
 
-/* 커스텀 그라디언트 */
+/* custom gradient */
 .bg-gradient-diagonal {
     background: linear-gradient(135deg, #131826, #2E3561, #6C52A0);
 }
