@@ -9,13 +9,13 @@ import Result from './components/Result';
 const HomePage: React.FC = () => {
   const [result, setResult] = useState<string | null>(null);
 
-  const handleComplete = async (answers: string[]) => {
+  const handleComplete = async (allQuestionsAndAnswers: { question: string; answer: string }[]) => {
     const response = await fetch('/api/analyze-stress', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ answers }),
+      body: JSON.stringify({ allQuestionsAndAnswers }),
     });
 
     if (!response.ok) {

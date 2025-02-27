@@ -1,18 +1,24 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { questions } from './questions';
 import Question from './Question';
 
 interface QuestionListProps {
-    onComplete: (answers: string[]) => void;
+    onComplete: (allQuestionsAndAnswers: { question: string, answer: string }[]) => void;
 }
 
 const QuestionList: React.FC<QuestionListProps> = ({ onComplete }) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState<string[]>([]);
+    const [questionHistory, setQuestionHistory] = useState<{ question: string, answer: string }[]>([]);
 
     const handleAnswer = (answer: string) => {
+        setQuestionHistory(prev => [
+            ...prev,
+            { question: questions[currentQuestionIndex].text, answer }
+        ]);
+
         setAnswers(prev => [...prev, answer]);
 
         if (currentQuestionIndex + 1 < questions.length) {
@@ -21,7 +27,7 @@ const QuestionList: React.FC<QuestionListProps> = ({ onComplete }) => {
             }, 800); // 0.8초 딜레이 
         } else {
             setTimeout(() => {
-                onComplete([...answers, answer]);
+                onComplete([...questionHistory, { question: questions[currentQuestionIndex].text, answer }]);
             }, 800);
         }
     };

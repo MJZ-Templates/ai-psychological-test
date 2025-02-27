@@ -3,7 +3,7 @@ import '@/styles/globals.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <html lang="ko" className="h-screen w-screen overflow-hidden">
+        <html lang="ko" className="h-screen w-screen">
             <head>
                 <title>스트레스 감지 심리테스트</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />

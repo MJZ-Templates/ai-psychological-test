@@ -5,9 +5,24 @@ interface ResultProps {
 }
 
 const Result: React.FC<ResultProps> = ({ message }) => (
-    <div className="my-8 p-6 bg-gray-800 text-gray-200 rounded-lg shadow-lg max-w-2xl mx-auto animate-fade-in">
-        <h2 className="text-3xl font-semibold mb-4 text-[#AD98D7] text-center mb-16 mt-8">스트레스 분석 결과</h2>
-        <p className="text-xl text-gray-300 leading-relaxed whitespace-pre-wrap break-words mb-8">{message}</p>
+    <div className="my-8 p-8 bg-gray-800/90 text-gray-200 rounded-lg shadow-xl max-w-3xl mx-auto animate-fade-in backdrop-blur-sm">
+        <h2 className="text-3xl font-semibold text-[#AD98D7] text-center mb-12 mt-4 font-['Ownglyph_ParkDaHyun']">
+            스트레스 분석 결과
+        </h2>
+        <div className="space-y-6 text-gray-300">
+            {message.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-lg leading-8 tracking-wide font-['NoonnuBasicGothicRegular'] px-4">
+                    {paragraph.trim().startsWith('•') ? (
+                        <span className="block pl-4">{paragraph}</span>
+                    ) : (
+                        paragraph
+                    )}
+                </p>
+            ))}
+        </div>
+        <div className="mt-12 text-center text-sm text-gray-400">
+            <p>※ 이 분석 결과는 참고용이며, 정확한 진단을 위해서는 전문가와 상담하시기를 권장드립니다.</p>
+        </div>
     </div>
 );
 
