@@ -13,6 +13,10 @@ const Result: React.FC<ResultProps> = ({ message }) => {
     
     return (
         <div className="my-8 p-8 bg-gray-800/90 text-gray-200 rounded-lg shadow-xl max-w-3xl mx-auto animate-fade-in backdrop-blur-sm overflow-auto max-h-[80vh] scrollbar-hide">
+
+            <h2 className="text-3xl font-semibold text-[#AD98D7] text-center mb-8 mt-2 font-['NoonnuBasicGothicRegular']">
+                스트레스 분석 결과
+            </h2>
             
             {/* 키워드 섹션 */}
             <div className="flex justify-center mb-8">
