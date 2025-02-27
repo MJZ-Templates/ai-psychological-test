@@ -72,3 +72,8 @@ body {
 .bg-gradient-diagonal {
     background: linear-gradient(135deg, #131826, #2E3561, #6C52A0);
 }
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
