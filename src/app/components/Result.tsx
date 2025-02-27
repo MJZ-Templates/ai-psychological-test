@@ -7,6 +7,9 @@ interface ResultProps {
 const Result: React.FC<ResultProps> = ({ message }) => {
     // 첫 번째 줄을 키워드로 분리
     const [keyword, ...paragraphs] = message.split('\n\n');
+    const regex = /상태:\s*([^\n]+)/;
+    const match = keyword.match(regex);
+    const extractedState = match ? match[1] : '';
     
     return (
         <div className="my-8 p-8 bg-gray-800/90 text-gray-200 rounded-lg shadow-xl max-w-3xl mx-auto animate-fade-in backdrop-blur-sm overflow-auto max-h-[80vh] scrollbar-hide">
@@ -15,7 +18,7 @@ const Result: React.FC<ResultProps> = ({ message }) => {
             <div className="flex justify-center mb-8">
                 <div className="inline-block px-6 py-3 bg-[#AD98D7]/20 rounded-full border border-[#AD98D7] text-[#AD98D7]">
                     <span className="text-xl font-bold font-['NoonnuBasicGothicRegular']">
-                        {keyword}
+                        {extractedState}
                     </span>
                 </div>
             </div>
